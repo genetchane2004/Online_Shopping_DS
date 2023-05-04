@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Add Product</title>
+    </h:head>
+    <h:body>
+        <f:view>
+        <h:form id="addProduct">
+            <table>
+                <tr>
+                    <td><h:outputText value="Product Name:" /></td>
+                    <td><h:inputText id="name" value="#{editProducts.name}"
+                            required="true" requiredMessage="Please enter product name" /></td>
+                    <td><h:message for="name" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Product Author:" /></td>
+                    <td><h:inputText id="author" value="#{editProducts.author}"
+                            required="true" requiredMessage="Please enter product author" /></td>
+                    <td><h:message for="lname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Price:" /></td>
+                    <td><h:inputText id="price" value="#{editProducts.price}"
+                            required="true" requiredMessage="Please enter product price" /></td>
+                    <td><h:message for="email" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Quantity:" /></td>
+                    <td><h:inputText id="quantity" value="#{editProducts.stock}"
+                            required="true" requiredMessage="Please enter your product quantity" /></td>
+                    <td><h:message for="quantity" style="color:red" /></td>
+                </tr>
+                  <tr>
+                    <td><h:outputText value="Product Description:" /></td>
+                    <td><h:inputText id="description" value="#{editProducts.description}" /></td>
+                </tr>
+                <tr>
+                    <td />
+                    <td><h:commandButton value="Add Product" action="#{editProducts.addProduct}" /></td>
+                </tr>
+            </table>
+        </h:form>
+    </f:view>
+    </h:body>
+</html>
+

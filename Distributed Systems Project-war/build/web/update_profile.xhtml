@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Update Profile</title>
+    </h:head>
+    <h:body>
+       <f:view>
+        <h:form id="updateProfileForm">
+            <table>
+                <tr>
+                    <td><h:outputText value="Name:" /></td>
+                    <td><h:inputText id="name" value="#{editProfile.user.customerName}"
+                            required="true" requiredMessage="Please enter your first name" /></td>
+                    <td><h:message for="name" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Password:" /></td>
+                    <td><h:inputSecret id="password" value="#{editProfile.user.customerPassword}"
+                            required="true" requiredMessage="Please enter your password" /></td>
+                    <td><h:message for="lname" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Email:" /></td>
+                    <td><h:inputText id="email" value="#{editProfile.user.customerEmail}"
+                            required="true" requiredMessage="Please enter your email" /></td>
+                    <td><h:message for="email" style="color:red" /></td>
+                </tr>
+                <tr>
+                    <td><h:outputText value="Address:" /></td>
+                    <td><h:inputText id="address" value="#{editProfile.user.customerAddress}"
+                            required="true" requiredMessage="Please enter your address" /></td>
+                    <td><h:message for="address" style="color:red" /></td>
+                </tr>
+                  <tr>
+                    <td><h:outputText value="Profile Description:" /></td>
+                    <td><h:inputText id="description" value="#{editProfile.user.customerDescription}" /></td>
+                </tr>
+                <tr>
+                    <td />
+                    <td><h:commandButton value="Update Profile" action="#{editProfile.updateUser}" /></td>
+                </tr>
+            </table>
+        </h:form>
+    </f:view>
+    </h:body>
+</html>
+
